@@ -1,0 +1,41 @@
+<div class="container shadow">
+    <div style="height:85vh;" class="text-center d-flex justify-content-center align-items-center">
+        <!-- Form start -->
+        <form class="container col-md-3" (ngSubmit)="registerUser()" #registerForm="ngForm">
+            <h2 class="mb-4">Registration</h2>
+            <!-- Name field -->
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control mb-2" id="floatingName" name="userName" [(ngModel)]="registerData.Name" #name="ngModel" placeholder="Name" required>
+                <label for="floatingName">Name</label>
+                <small class="text-danger form-text" [hidden]="name.valid || name.pristine">Please enter your name</small>
+            </div>
+            <!-- Email address field -->
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control mb-2" id="floatingEmail" name="email" [(ngModel)]="registerData.Email" #email="ngModel" placeholder="name@example.com" required pattern="^[a-z0-9,%+]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                <label for="floatingEmail">Email address</label>
+                <small class="text-danger form-text" [hidden]="email.valid || email.pristine">Enter a valid email address.</small>
+            </div>
+            <!-- Password field -->
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control mb-2" id="floatingPassword" placeholder="Password" name="password" [(ngModel)]="registerData.Password" #password="ngModel" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$#%^&(){}[\]:;<>,.?/~_+\-=|]).{8,20}$"
+                    required>
+                <label for="floatingPassword">Password</label>
+                <small class="text-danger form-text" [hidden]="password.valid || password.pristine">Your password must be 8-20 characters long, contain uppercase and lowercase letters, numbers, and special characters and must not contain spaces.</small>
+            </div>
+            <!-- Confirm password field -->
+            <div class="form-floating">
+                <input type="password" class="form-control mb-2" id="floatingPassword2" placeholder="Password" name="confPassword" required>
+                <label for="floatingPassword2">Confirm Password</label>
+            </div>
+            <div class=" pt-3">
+                <button class="w-75 btn btn-lg btn-primary" type="submit" [disabled]="!registerForm.form.valid">Register</button>
+            </div>
+            <div class="message-box">
+                <label>Already have an account?
+                    <a href="/login">Login</a>
+                </label>
+           </div>
+        </form>
+        <!-- Form end -->
+    </div>
+</div>

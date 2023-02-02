@@ -1,0 +1,19 @@
+<div class="container pt-5 col-6">
+    <table class="table table-hover table-borderless table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">UserRole</th>
+            <th scope="col-3" class="d-flex justify-content-center">Give Admin Privilege</th>
+          </tr>
+        </thead>
+        <!-- Displaying user details and privilege -->
+        <tbody>
+          <tr *ngFor = 'let user of users' class="align-middle">
+            <td>{{user.Name}}</td>
+            <td>{{user.UserRole}}</td>
+            <td class="d-flex justify-content-center p-3"><input type="checkbox" name="userRole" id="userRole" (change)="changeRole(user)" [checked]="user.UserRole === 'Admin' "></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

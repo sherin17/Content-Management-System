@@ -1,0 +1,29 @@
+.shadow{
+    margin-top: 80px;
+    width: 50%;
+    background-color: #b5acb6;
+}
+form{
+    
+    width: 50%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+h2{
+    text-align: center;
+}
+ input{ 
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  padding-left: 26px;
+  background: #fae9fb;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}

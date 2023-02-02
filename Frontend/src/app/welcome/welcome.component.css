@@ -1,0 +1,34 @@
+
+#home{
+    height: 100vh;
+  }
+  
+  .welcome-area .header-text{
+    width: 100%;
+    background: no-repeat center center;
+    background-color: #f4f5f2;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    background-image: url('/assets/bg.jpg')
+    
+  }
+ 
+  #body{
+    background-color: rgba(250, 245, 245, 0.797);
+    animation-delay: calc(var(--scroll) * -1s);
+  }
+  
+  .heading-section {
+    animation: fadeInUp 1s ease-in-out 1s;
+    text-align: center;
+    padding-top: 100px;
+  }
+ 
+  @media (min-width: 992px) {
+    .post-preview > a > .post-title {
+      font-size: 2.25rem;
+    }
+  }
+  
+  

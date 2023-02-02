@@ -1,0 +1,11 @@
+
+#mainNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  border-bottom: 1px solid #dee2e6;
+  background-color: rgb(131, 133, 125);
+  display: flex;
+  }

@@ -1,0 +1,33 @@
+<div class="container shadow">
+    <div style="height:85vh;" class="text-center d-flex justify-content-center align-items-center">
+        <form class="container col-md-4 col-lg-6" (ngSubmit)="updatePost()" #postForm="ngForm">
+            <h2 class="mb-4">Edit Blog</h2>
+            
+            <!-- Title field -->
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control mb-2" id="floatingInput" name="title" [(ngModel)]="postData.Title" placeholder="Blog Title" required #title="ngModel">
+                <label for="floatingInput">Title</label>
+                <small class="text-danger form-text" [hidden]="title.valid || title.pristine">Enter a valid title for your blog</small>
+            </div>
+            <!-- Category name field -->
+            <div class="mb-3">
+                <label for="category">Choose a category :</label>
+                <select name="category" required [(ngModel)]="postData.Category" #category="ngModel">
+                    <option *ngFor="let category of categories" value="{{category.Name}}">{{category.Name}}</option>
+                 </select>
+                 <br>
+                 <small class="text-danger form-text" [hidden]="category.valid || category.pristine">Please select a category for your blog</small>
+            </div>
+            <!-- Content field -->
+            <div class="mb-3">
+                <label for="content">Content</label>
+                <textarea name="content" class="form-control mb-2" id="content" rows="10" placeholder="Write here" [(ngModel)]="postData.Content" required #content="ngModel"></textarea>
+                <small class="text-danger form-text" [hidden]="content.valid || content.pristine">Please write the content for your blog</small>
+            </div>
+            <!-- Update button -->
+            <div class=" pt-3">
+                <button class="w-75 btn btn-lg btn-primary" type="submit" [disabled]="!postForm.form.valid">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

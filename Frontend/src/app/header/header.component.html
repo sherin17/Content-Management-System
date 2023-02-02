@@ -1,0 +1,27 @@
+
+  <nav class="navbar navbar-expand-lg p-3 navbar-dark" id="mainNav">
+    <div class="container-fluid">
+        <a class="navbar-brand">
+            <img src="/assets/blog.png" alt="Blog" width="30" height="24" class="d-inline-block align-text-top">
+            Blog
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" [ngbCollapse]="isMenuCollapsed">
+          <div class="navbar-nav">
+            <!-- Navbar links -->
+            <a class="nav-link active" aria-current="page" routerLinkActive="active" [routerLinkActiveOptions]= '{exact : true}' routerLink="" (click)="isMenuCollapsed = true" *ngIf="!auth.isLoggedIn()">Home</a>
+
+            <a class="nav-link" routerLink="login" (click)="isMenuCollapsed = true" *ngIf="!auth.isLoggedIn()">Login</a>
+            <a class="nav-link" routerLink="register" (click)="isMenuCollapsed = true" *ngIf="!auth.isLoggedIn()">Register</a>
+            <a class="nav-link" routerLink="usermanage" (click)="isMenuCollapsed = true" *ngIf="auth.getRole() === 'Root'">Profiles</a>
+            <a class="nav-link" routerLink="newpost" (click)="isMenuCollapsed = true" *ngIf="auth.isLoggedIn()">New Blog</a>
+            <a class="nav-link" routerLink="myposts" (click)="isMenuCollapsed = true" *ngIf="auth.isLoggedIn()">My Blogs</a>
+            <a class="nav-link" routerLink="categories" (click)="isMenuCollapsed = true" *ngIf="auth.getRole() === 'Root' || auth.getRole() === 'Admin' ">Categories</a>
+            <a class="nav-link" routerLink="logout" (click)="isMenuCollapsed = true" (click)="logoutUser()" *ngIf="auth.isLoggedIn()">Logout</a>
+          </div>
+        </div>
+    </div>
+</nav>
