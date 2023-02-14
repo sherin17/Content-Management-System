@@ -14,20 +14,20 @@ require('./middlewares/mongodb')
 
 
 // Routers
-const registerRouter = require('./routers/registerRouter')
-const loginRouter = require('./routers/loginRouter')
-const usersRouter = require('./routers/usersRouter')
-const roleChangeRouter = require('./routers/roleChangeRouter')
-const categoriesRouter = require('./routers/categoriesRouter')
-const postsRouter = require('./routers/postsRouter')
+const register = require('./routers/register')
+const login = require('./routers/login')
+const users = require('./routers/users')
+const roleChange = require('./routers/RoleChange')
+const categories= require('./routers/categories')
+const blogs = require('./routers/blogs')
 
 // Routes
-app.use('/register', registerRouter)
-app.use('/login', loginRouter)
-app.use('/users', usersRouter)
-app.use('/changerole', roleChangeRouter)
-app.use('/categories', categoriesRouter)
-app.use('/posts', postsRouter)
+app.use('/register', register)
+app.use('/login', login)
+app.use('/users', users)
+app.use('/changerole', roleChange)
+app.use('/categories', categories)
+app.use('/posts', blogs)
 
 app.listen( port, function(){
     console.log('Listening on PORT ' + port)
