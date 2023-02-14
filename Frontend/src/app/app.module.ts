@@ -10,12 +10,12 @@ import { RegisterComponent } from './register/register.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { NewPostComponent } from './new-blog/new-blog.component';
+import { NewBlogComponent } from './new-blog/new-blog.component';
 import { FormsModule } from '@angular/forms';
 import { UserManagementComponent } from './user-management/user-management.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { MyPostsComponent } from './my-blogs/my-blogs.component';
-import { EditPostComponent } from './edit-blog/edit-blog.component';
+import { MyBlogsComponent } from './my-blogs/my-blogs.component';
+import { EditBlogComponent } from './edit-blog/edit-blog.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +25,11 @@ import { EditPostComponent } from './edit-blog/edit-blog.component';
     WelcomeComponent,
     HomeComponent,
     LoginComponent,
-    NewPostComponent,
+    NewBlogComponent,
     UserManagementComponent,
     CategoriesComponent,
-    MyPostsComponent,
-    EditPostComponent
+    MyBlogsComponent,
+    EditBlogComponent
   ],
   imports: [
     BrowserModule,

@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-new-post',
+  selector: 'app-new-blog',
   templateUrl: './new-blog.component.html',
   styleUrls: ['./new-blog.component.css']
 })
-export class NewPostComponent implements OnInit {
+export class NewBlogComponent implements OnInit {
 
   categories : any[] = []
 

@@ -17,8 +17,8 @@
             <a class="nav-link" routerLink="login" (click)="isMenuCollapsed = true" *ngIf="!auth.isLoggedIn()">Login</a>
             <a class="nav-link" routerLink="register" (click)="isMenuCollapsed = true" *ngIf="!auth.isLoggedIn()">Register</a>
             <a class="nav-link" routerLink="usermanage" (click)="isMenuCollapsed = true" *ngIf="auth.getRole() === 'Root'">Profiles</a>
-            <a class="nav-link" routerLink="newpost" (click)="isMenuCollapsed = true" *ngIf="auth.isLoggedIn()">New Blog</a>
-            <a class="nav-link" routerLink="myposts" (click)="isMenuCollapsed = true" *ngIf="auth.isLoggedIn()">My Blogs</a>
+            <a class="nav-link" routerLink="newblog" (click)="isMenuCollapsed = true" *ngIf="auth.isLoggedIn()">New Blog</a>
+            <a class="nav-link" routerLink="myblogs" (click)="isMenuCollapsed = true" *ngIf="auth.isLoggedIn()">My Blogs</a>
             <a class="nav-link" routerLink="categories" (click)="isMenuCollapsed = true" *ngIf="auth.getRole() === 'Root' || auth.getRole() === 'Admin' ">Categories</a>
             <a class="nav-link" routerLink="logout" (click)="isMenuCollapsed = true" (click)="logoutUser()" *ngIf="auth.isLoggedIn()">Logout</a>
           </div>

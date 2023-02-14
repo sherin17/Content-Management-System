@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import { PostsService } from '../posts.service';
 
 @Component({
-  selector: 'app-my-posts',
+  selector: 'app-my-blogs',
   templateUrl: './my-blogs.component.html',
   styleUrls: ['./my-blogs.component.css']
 })
-export class MyPostsComponent implements OnInit {
+export class MyBlogsComponent implements OnInit {
 
   categories : any[] = []
   posts : any[] = []
