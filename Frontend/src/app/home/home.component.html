@@ -1,8 +1,8 @@
 
-<div class=" col-lg-8 mt-5  mx-5 mb-5 mb-lg-0">
-    <article class="row mb-5">
+
+    <div class="row mb-5 mt-5">
         <div class="col-12 mx-auto my-3" *ngFor="let post of posts">
-            <div class="container shadow">
+            <div class="container shadow col-lg-8 mt-5 ps-3 pt-3 pb-3 px-3  mx-5 mb-5 mb-lg-0">
             <h2 class="post-title">{{post.Title}}</h2>
             <ul class="list-inline post-meta mb-4">
                 <li class="list-inline-item"><strong>Posted by </strong>{{post.Author}}</li>
@@ -12,8 +12,8 @@
             <p align="justify">{{post.Content}}</p>
           </div>
         </div>
-    </article>         
+    </div>         
 
-</div>
+
 
 
